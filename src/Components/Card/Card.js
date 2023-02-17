@@ -1,14 +1,16 @@
 import React from 'react';
-import { Container, Name, Specie, Status, Avatar, SubContainer } from './Card.styles.js';
+import { Container, Name, Avatar, SubContainer, Label, Status } from './Card.styles.js';
 
-const Card = () => {
+const Card = ({ payload }) => {
 	return (
-		<Container>
-			<Avatar>Avatar</Avatar>
+		<Container selected={false}>
+			<Avatar src={payload.image} />
 			<SubContainer>
-				<Name>Name</Name>
-				<Specie>Specie</Specie>
-				<Status>Status</Status>
+				<Name>{payload.name}</Name>
+				<Label>
+					<Status status={payload.status} />
+					{payload.status} - {payload.species}
+				</Label>
 			</SubContainer>
 		</Container>
 	);

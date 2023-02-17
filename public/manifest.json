@@ -10,12 +10,12 @@
 		{
 			"src": "rick.png",
 			"type": "image/png",
-			"sizes": "192x192"
+			"sizes": "48x48"
 		},
 		{
 			"src": "rick.png",
 			"type": "image/png",
-			"sizes": "512x512"
+			"sizes": "48x48"
 		}
 	],
 	"start_url": ".",
