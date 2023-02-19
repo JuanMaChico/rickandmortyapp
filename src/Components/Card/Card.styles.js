@@ -18,7 +18,6 @@ export const Container = styled.div`
 		css`
 			border-color: red;
 		`}
-
 `;
 export const SubContainer = styled.div`
 	display: flex;
@@ -46,11 +45,15 @@ export const Label = styled.div`
 	display: flex;
 	align-items: center;
 	flex-direction: row;
-	justify-content: space-evenly;
+	justify-content: center;
+	max-width: 90%;
 	color: #cfcfcf;
 `;
 
 export const Status = styled.div`
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 	width: 12px;
 	height: 12px;
 	margin-right: 12px;

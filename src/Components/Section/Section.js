@@ -1,11 +1,15 @@
 import React from 'react';
 import Card from '../Card/Card';
-import { Container } from './Section.styles';
+import { Container, Title } from './Section.styles';
 
-const Section = ({ payload }) => {
+const Section = ({ title, payload, setCharacter, character }) => {
 	return (
 		<Container>
-			{payload.results && payload.results.map((item) => <Card payload={item} />)}
+			<Title>{title}</Title>
+			{payload &&
+				payload.map((item, key) => (
+					<Card handler={setCharacter} select={character} key={key} payload={item} />
+				))}
 		</Container>
 	);
 };

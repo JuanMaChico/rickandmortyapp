@@ -1,9 +1,14 @@
 import React from 'react';
 import { Container, Name, Avatar, SubContainer, Label, Status } from './Card.styles.js';
 
-const Card = ({ payload }) => {
+const Card = ({ payload, handler, select }) => {
 	return (
-		<Container selected={false}>
+		<Container
+			selected={select.id === payload.id}
+			onClick={() => {
+				handler(payload);
+			}}
+		>
 			<Avatar src={payload.image} />
 			<SubContainer>
 				<Name>{payload.name}</Name>
