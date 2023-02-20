@@ -1,5 +1,5 @@
 import Section from '../Components/Section/Section';
-import { Container, SubContainer, Plus } from '../Views/App.styles';
+import { Container, SubContainer, Plus } from './App.styles';
 import { useEffect, useState } from 'react';
 import plusIMG from '../Assets/Plus.png';
 import List from '../Components/List/List';

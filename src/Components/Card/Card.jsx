@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Name, Avatar, SubContainer, Label, Status } from './Card.styles.js';
+import { Container, Name, Avatar, SubContainer, Label, Status } from './Card.styles.jsx';
 
 const Card = ({ payload, handler, select }) => {
 	return (
