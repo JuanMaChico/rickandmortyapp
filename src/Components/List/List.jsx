@@ -26,7 +26,7 @@ const List = ({ title, payload }) => {
 		if (data.characterOne && data.characterTwo) {
 			if (formatterIdEpisodes(searchSharedEpisodes(data)) === '') {
 				setEpisodesList(false);
-				return undefined;
+				return false;
 			}
 			return formatterIdEpisodes(searchSharedEpisodes(data));
 		}
