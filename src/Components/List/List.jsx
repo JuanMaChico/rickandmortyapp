@@ -46,8 +46,7 @@ const List = ({ title, payload }) => {
 			setEpisodesList(false);
 		}
 		setEpisodes(searchEpisodes(payload));
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [payload, episodes, episodesList]);
+	}, [payload, episodes]);
 
 	return (
 		<Container>
