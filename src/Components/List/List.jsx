@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Spinner from '../Spinner/Spinner';
 import { Container, Title } from './List.styles';
 
 const List = ({ title, payload }) => {
@@ -52,10 +53,14 @@ const List = ({ title, payload }) => {
 		<Container>
 			<Title>{title}</Title>
 			<ul>
-				{Array.isArray(episodesList) ? (
-					episodesList.map((item, key) => (
-						<li key={key}>{`${item.id} - ${item.name} - ${item.air_date}`}</li>
-					))
+				{episodesList ? (
+					Array.isArray(episodesList) ? (
+						episodesList.map((item, key) => (
+							<li key={key}>{`${item.id} - ${item.name} - ${item.air_date}`}</li>
+						))
+					) : (
+						<Spinner />
+					)
 				) : (
 					<li>
 						{episodesList ? (

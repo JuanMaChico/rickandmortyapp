@@ -5,8 +5,8 @@ import plusIMG from '../Assets/Plus.png';
 import List from '../Components/List/List';
 
 function App() {
-	const [characterListOne, setCharacterListOne] = useState('');
-	const [characterListTwo, setCharacterListTwo] = useState('');
+	const [characterListOne, setCharacterListOne] = useState(false);
+	const [characterListTwo, setCharacterListTwo] = useState(false);
 
 	const [characterOne, setCharacterOne] = useState(false);
 	const [characterTwo, setCharacterTwo] = useState(false);
