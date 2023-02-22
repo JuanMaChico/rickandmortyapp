@@ -11,6 +11,11 @@ import React, { useEffect, useState } from 'react';
 import Spinner from '../Spinner/Spinner';
 import { Container, Title } from './List.styles';
 
+/**
+ * @description List the episodes
+ * @param { string } title
+ * @param { array } payload
+ * */
 const List = ({ title, payload }) => {
 	//Lista de Episodios
 	const [episodesList, setEpisodesList] = useState(false);
@@ -32,6 +37,7 @@ const List = ({ title, payload }) => {
 		}
 	};
 
+	// Formateo y me quedo con los números de episodios
 	const formatterIdEpisodes = (data) => {
 		let info = '';
 		data.forEach((item) => {
@@ -40,6 +46,7 @@ const List = ({ title, payload }) => {
 		return info;
 	};
 
+	//Macheo episodios compartidos entre characters
 	const searchSharedEpisodes = (data) => {
 		let info = data.characterOne.episode.filter(
 			(x) => data.characterTwo.episode.indexOf(x) !== -1,

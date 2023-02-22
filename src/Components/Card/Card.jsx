@@ -10,6 +10,12 @@
 import React from 'react';
 import { Container, Name, Avatar, SubContainer, Label, Status } from './Card.styles.jsx';
 
+/**
+ * @description Card the Characters
+ * @param { JSON } payload character
+ * @param { Function } handler Set character
+ * @param { character } select hook character
+ */
 const Card = ({ payload, handler, select }) => {
 	return (
 		<Container

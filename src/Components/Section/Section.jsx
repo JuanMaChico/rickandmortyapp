@@ -13,6 +13,13 @@ import Card from '../Card/Card.jsx';
 import { Container, Title } from './Section.styles';
 import Spinner from '../Spinner/Spinner';
 
+/**
+ * @description Contenedor de cards
+ * @param { string } title
+ * @param { json } payload
+ * @param { Function } setCharacter
+ * @param { character } character
+ */
 const Section = ({ title, payload, setCharacter, character }) => {
 	return (
 		<Container>
