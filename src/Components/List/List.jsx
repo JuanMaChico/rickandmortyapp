@@ -1,3 +1,12 @@
+/*
+ * List.jsx
+ *
+ * Created on 20 febrero de 2023
+ * Copyright (c)
+ * Juan Manuel Chico <b>juanmanuelchico@hotmail.com</b>
+ *
+ */
+//Dependencias
 import React, { useEffect, useState } from 'react';
 import Spinner from '../Spinner/Spinner';
 import { Container, Title } from './List.styles';

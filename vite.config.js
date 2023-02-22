@@ -1,5 +1,5 @@
 /*
- * vite.config.ts
+ * vite.config.js
  *
  * Created on 20 febrero de 2023
  * Copyright (c)

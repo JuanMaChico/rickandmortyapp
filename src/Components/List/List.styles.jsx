@@ -1,3 +1,12 @@
+/*
+ * List.styles.jsx
+ *
+ * Created on 20 febrero de 2023
+ * Copyright (c)
+ * Juan Manuel Chico <b>juanmanuelchico@hotmail.com</b>
+ *
+ */
+//Dependencias
 import styled from 'styled-components';
 
 export const Container = styled.div`

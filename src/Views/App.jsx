@@ -1,3 +1,13 @@
+/*
+ * App.jsx
+ *
+ * Created on 20 febrero de 2023
+ * Copyright (c)
+ * Juan Manuel Chico <b>juanmanuelchico@hotmail.com</b>
+ *
+ */
+
+//Dependencias
 import Section from '../Components/Section/Section';
 import { Container, SubContainer, Plus } from './App.styles';
 import { useEffect, useState } from 'react';
