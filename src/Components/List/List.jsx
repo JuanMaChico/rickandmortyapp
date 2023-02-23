@@ -56,13 +56,13 @@ const List = ({ title, payload }) => {
 	};
 
 	useEffect(() => {
+		setEpisodes(searchEpisodes(payload));
 		if (episodes) {
 			getEpisodes(episodes, setEpisodesList);
 		} else {
 			setEpisodesList(false);
 		}
-		setEpisodes(searchEpisodes(payload));
-	}, [payload, episodes]);
+	}, [payload, episodes, episodesList]);
 
 	return (
 		<Container>
