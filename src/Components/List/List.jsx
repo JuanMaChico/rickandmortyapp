@@ -26,7 +26,6 @@ const List = ({ title, payload }) => {
 
 	//Crear la petición de episodios
 	const searchEpisodes = (data) => {
-		console.log("search Episodes",data);
 		if (data.episode) {
 			return formatterIdEpisodes(data.episode);
 		}
