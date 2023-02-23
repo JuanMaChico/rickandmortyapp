@@ -10,7 +10,19 @@ export const Container = styled.div`
 
 export const SubContainer = styled.div`
 	display: flex;
-	flex-direction: row;
+	flex-wrap: wrap;
+	@media (min-width: 830px) {
+		flex-wrap: nowrap;
+	}
+`;
+
+export const SubContainerList = styled.div`
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	@media (min-width: 1700px) {
+		flex-wrap: nowrap;
+	}
 `;
 
 export const Plus = styled.img`

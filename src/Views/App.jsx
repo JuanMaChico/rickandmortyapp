@@ -9,10 +9,11 @@
 
 //Dependencias
 import Section from '../Components/Section/Section';
-import { Container, SubContainer, Plus } from './App.styles';
+import { Container, SubContainer, SubContainerList, Plus } from './App.styles';
 import { useEffect, useState } from 'react';
 import plusIMG from '../Assets/Plus.png';
 import List from '../Components/List/List';
+import { getPages } from '../Services/CharacterServices';
 
 function App() {
 	const [characterListOne, setCharacterListOne] = useState(false);
@@ -24,12 +25,10 @@ function App() {
 	const [page, setPage] = useState(1);
 
 	useEffect(() => {
-		fetch(`https://rickandmortyapi.com/api/character?page=${page}`)
-			.then((response) => response.json())
-			.then((json) => {
-				setCharacterListOne(json.results.slice(0, 10));
-				setCharacterListTwo(json.results.slice(10, 20));
-			});
+		getPages(page, (json) => {
+			setCharacterListOne(json.results.slice(0, 10));
+			setCharacterListTwo(json.results.slice(10, 20));
+		});
 	}, [page]);
 
 	return (
@@ -59,14 +58,14 @@ function App() {
 					setCharacter={setCharacterTwo}
 				/>
 			</SubContainer>
-			<SubContainer>
+			<SubContainerList>
 				<List payload={characterOne} title={'Character #1 - Only Episodes'} />
 				<List
 					payload={{ characterOne, characterTwo }}
 					title={'Character #1 & #2 - Shared Episodes'}
 				/>
 				<List payload={characterTwo} title={'Character #2 - Only Episodes'} />
-			</SubContainer>
+			</SubContainerList>
 		</Container>
 	);
 }

@@ -8,6 +8,7 @@
  */
 //Dependencias
 import React, { useEffect, useState } from 'react';
+import { getEpisodes } from '../../Services/CharacterServices';
 import Spinner from '../Spinner/Spinner';
 import { Container, Title } from './List.styles';
 
@@ -25,6 +26,7 @@ const List = ({ title, payload }) => {
 
 	//Crear la petición de episodios
 	const searchEpisodes = (data) => {
+		console.log("search Episodes",data);
 		if (data.episode) {
 			return formatterIdEpisodes(data.episode);
 		}
@@ -41,7 +43,7 @@ const List = ({ title, payload }) => {
 	const formatterIdEpisodes = (data) => {
 		let info = '';
 		data.forEach((item) => {
-			info = info + ',' + item.split('/')[5];
+			info = info + ',' + item.slice(item.lastIndexOf('/') + 1);
 		});
 		return info;
 	};
@@ -56,9 +58,7 @@ const List = ({ title, payload }) => {
 
 	useEffect(() => {
 		if (episodes) {
-			fetch(`https://rickandmortyapi.com/api/episode/${episodes}`)
-				.then((response) => response.json())
-				.then((json) => setEpisodesList(json));
+			getEpisodes(episodes, setEpisodesList);
 		} else {
 			setEpisodesList(false);
 		}
