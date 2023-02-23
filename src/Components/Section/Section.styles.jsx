@@ -17,8 +17,7 @@ export const Container = styled.div`
 	justify-content: center;
 	text-align: center;
 	margin: 12px 0px 12px 0px;
-	height: 70vh;
-	overflow-y: auto;
+	height: auto;
 `;
 
 export const Title = styled.h1`

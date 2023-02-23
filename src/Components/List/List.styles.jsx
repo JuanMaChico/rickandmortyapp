@@ -20,7 +20,7 @@ export const Container = styled.div`
 	background-color: #202329eb;
 	border-radius: 12px;
 	width: 500px;
-	height: 20vh;
+	height: auto;
 	min-width: 450px;
 `;
 
